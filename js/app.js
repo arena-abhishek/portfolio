@@ -1,5 +1,3 @@
-
-
 /********************* Menu Js **********************/
 
 function windowScroll() {
@@ -14,14 +12,10 @@ function windowScroll() {
   }
 }
 
-window.addEventListener('scroll', (ev) => {
+window.addEventListener("scroll", (ev) => {
   ev.preventDefault();
   windowScroll();
-})
-
-
-
-
+});
 
 //
 /********************* light-dark js ************************/
@@ -38,8 +32,6 @@ btn.addEventListener("click", (e) => {
     localStorage.setItem("theme", "light");
   }
 });
-
-
 
 // tiny slide **** home
 
@@ -75,7 +67,6 @@ btn.addEventListener("click", (e) => {
 }
  */
 
-
 // text-animation
 
 try {
@@ -84,7 +75,7 @@ try {
     this.el = el;
     this.loopNum = 0;
     this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
+    this.txt = "";
     this.tick();
     this.isDeleting = false;
   };
@@ -97,14 +88,16 @@ try {
     } else {
       this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
-    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
     var that = this;
     var delta = 200 - Math.random() * 100;
-    if (this.isDeleting) { delta /= 2; }
+    if (this.isDeleting) {
+      delta /= 2;
+    }
     if (!this.isDeleting && this.txt === fullTxt) {
       delta = this.period;
       this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
+    } else if (this.isDeleting && this.txt === "") {
       this.isDeleting = false;
       this.loopNum++;
       delta = 500;
@@ -115,14 +108,12 @@ try {
   };
 
   function typewrite() {
-    if (toRotate === 'undefined') {
-      changeText()
-    }
-    else
-      var elements = document.getElementsByClassName('typewrite');
+    if (toRotate === "undefined") {
+      changeText();
+    } else var elements = document.getElementsByClassName("typewrite");
     for (var i = 0; i < elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-type');
-      var period = elements[i].getAttribute('data-period');
+      var toRotate = elements[i].getAttribute("data-type");
+      var period = elements[i].getAttribute("data-period");
       if (toRotate) {
         new TxtType(elements[i], JSON.parse(toRotate), period);
       }
@@ -132,25 +123,20 @@ try {
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #ffffff}";
     document.body.appendChild(css);
-  };
+  }
   typewrite();
-
-} catch (error) {
-
-}
-
-
+} catch (error) {}
 
 // swiper slider
 
 try {
-  new Swiper('.swiper-container', {
+  new Swiper(".swiper-container", {
     loop: true,
     slidesPerView: 3,
     paginationClickable: true,
     spaceBetween: 20,
-    pagination: '.swiper-pagination',
-    slidesPerView: 'auto',
+    pagination: ".swiper-pagination",
+    slidesPerView: "auto",
     paginationClickable: true,
     spaceBetween: 0,
     centeredSlides: true,
@@ -158,30 +144,25 @@ try {
     breakpoints: {
       1920: {
         slidesPerView: 3,
-        spaceBetween: 30
+        spaceBetween: 30,
       },
       1028: {
         slidesPerView: 2,
-        spaceBetween: 30
+        spaceBetween: 30,
       },
       768: {
         slidesPerView: 1,
-        spaceBetween: 10
-      }
-    }
+        spaceBetween: 10,
+      },
+    },
   });
-
-} catch (error) {
-
-}
-
-
+} catch (error) {}
 
 // tiny slide **** home
 
 try {
   var slider = tns({
-    container: '.work-slider',
+    container: ".work-slider",
     loop: true,
     autoplay: true,
     mouseDrag: true,
@@ -193,41 +174,33 @@ try {
     center: false,
     animateIn: "fadeIn",
     animateOut: "fadeOut",
-    controlsText: ['&#8592;', '&#8594;'],
+    controlsText: ["&#8592;", "&#8594;"],
     autoplayButtonOutput: false,
     gutter: 30,
     responsive: {
-
       992: {
         gutter: 30,
-        items: 3
+        items: 3,
       },
-
-    }
+    },
   });
-
-} catch (error) {
-
-}
-
+} catch (error) {}
 
 try {
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
-} catch (error) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+} catch (error) {}
 
-}
-
-
-// 
+//
 // home-5
-
 
 try {
   var slider = tns({
-    container: '.home5-slider',
+    container: ".home5-slider",
     loop: true,
     autoplay: true,
     mouseDrag: true,
@@ -239,39 +212,30 @@ try {
     center: false,
     animateIn: "fadeIn",
     animateOut: "fadeOut",
-    controlsText: ['&#8592;', '&#8594;'],
+    controlsText: ["&#8592;", "&#8594;"],
     autoplayButtonOutput: false,
-    items:2,
+    items: 2,
     gutter: 30,
     responsive: {
-
       992: {
         gutter: 30,
-        items: 3
+        items: 3,
       },
 
-      576:{
+      576: {
         gutter: 30,
-        items: 2
-      }
-
-    }
+        items: 2,
+      },
+    },
   });
+} catch (error) {}
 
-} catch (error) {
-
-}
-
-
-
-
-// 
+//
 // home-5
-
 
 try {
   var slider = tns({
-    container: '.home6-slider',
+    container: ".home6-slider",
     loop: true,
     autoplay: true,
     mouseDrag: true,
@@ -283,31 +247,23 @@ try {
     center: false,
     animateIn: "fadeIn",
     animateOut: "fadeOut",
-    controlsText: ['&#8592;', '&#8594;'],
+    controlsText: ["&#8592;", "&#8594;"],
     autoplayButtonOutput: false,
-    items:2,
+    items: 2,
     gutter: 30,
     responsive: {
-
       992: {
         gutter: 30,
-        items: 2.5
+        items: 2.5,
       },
 
-      576:{
+      576: {
         gutter: 30,
-        items: 2
-      }
-
-    }
+        items: 2,
+      },
+    },
   });
-
-} catch (error) {
-
-}
-
-
-
+} catch (error) {}
 
 // Contact Form
 function validateForm() {
@@ -316,41 +272,54 @@ function validateForm() {
   var subject = document.forms["myForm"]["subject"].value;
   var comments = document.forms["myForm"]["comments"].value;
   document.getElementById("error-msg").style.opacity = 0;
-  document.getElementById('error-msg').innerHTML = "";
+  document.getElementById("error-msg").innerHTML = "";
   if (name == "" || name == null) {
-      document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning'>*Please enter a Name*</div>";
-      fadeIn();
-      return false;
+    document.getElementById("error-msg").innerHTML =
+      "<div class='alert alert-warning'>*Please enter a Name*</div>";
+    fadeIn();
+    return false;
   }
   if (email == "" || email == null) {
-      document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning'>*Please enter a Email*</div>";
-      fadeIn();
-      return false;
+    document.getElementById("error-msg").innerHTML =
+      "<div class='alert alert-warning'>*Please enter a Email*</div>";
+    fadeIn();
+    return false;
   }
   if (subject == "" || subject == null) {
-      document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning'>*Please enter a Subject*</div>";
-      fadeIn();
-      return false;
+    document.getElementById("error-msg").innerHTML =
+      "<div class='alert alert-warning'>*Please enter a Subject*</div>";
+    fadeIn();
+    return false;
   }
   if (comments == "" || comments == null) {
-      document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning'>*Please enter a Comments*</div>";
-      fadeIn();
-      return false;
+    document.getElementById("error-msg").innerHTML =
+      "<div class='alert alert-warning'>*Please enter a Comments*</div>";
+    fadeIn();
+    return false;
   }
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("simple-msg").innerHTML = this.responseText;
-          document.forms["myForm"]["name"].value = "";
-          document.forms["myForm"]["email"].value = "";
-          document.forms["myForm"]["subject"].value = "";
-          document.forms["myForm"]["comments"].value = "";
-      }
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("simple-msg").innerHTML = this.responseText;
+      document.forms["myForm"]["name"].value = "";
+      document.forms["myForm"]["email"].value = "";
+      document.forms["myForm"]["subject"].value = "";
+      document.forms["myForm"]["comments"].value = "";
+    }
   };
   xhttp.open("POST", "php/contact.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("name=" + name + "&email=" + email + "&subject=" + subject + "&comments=" + comments);
+  xhttp.send(
+    "name=" +
+      name +
+      "&email=" +
+      email +
+      "&subject=" +
+      subject +
+      "&comments=" +
+      comments
+  );
   return false;
 }
 
@@ -358,12 +327,22 @@ function fadeIn() {
   var fade = document.getElementById("error-msg");
   var opacity = 0;
   var intervalID = setInterval(function () {
-      if (opacity < 1) {
-          opacity = opacity + 0.5
-          fade.style.opacity = opacity;
-      } else {
-          clearInterval(intervalID);
-      }
+    if (opacity < 1) {
+      opacity = opacity + 0.5;
+      fade.style.opacity = opacity;
+    } else {
+      clearInterval(intervalID);
+    }
   }, 200);
 }
 
+/* navigation bar start */
+
+function setActive(element) {
+  var links = document.querySelectorAll(".nav-link");
+  links.forEach(function (link) {
+    link.classList.remove("active");
+  });
+  element.classList.add("active");
+}
+/* navigation bar end */

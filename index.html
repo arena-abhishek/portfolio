@@ -64,31 +64,27 @@
 
         <div class="collapse navbar-collapse mt-sm-0 mt-5" id="navbarCollapse">
           <ul class="navbar-nav ms-auto navbar-center">
-            <li class="nav-item active">
-              <a href="#home" class="nav-link active">Home</a>
-            </li>
+            <li class="nav-item ">
+              <a href="#home" class="nav-link active" onclick="setActive(this)">Home</a> 
+            </li> 
             <li class="nav-item dropdown dropdown-hover">
-              <a href="#aboutme" class="nav-link ">About Us</a>
+              <a href="#aboutme" class="nav-link" onclick="setActive(this)">About Us</a> 
             </li>
-            <li class="nav-item dropdown dropdown-hover">
-              <a href="#service" class="nav-link ">Service</a>
-            </li>
-
-            <li class="nav-item dropdown dropdown-hover">
-              <a href="#work" class="nav-link ">Work</a>
-            </li>
-           <!--  <li class="nav-item">
-              <a href="#pricing" class="nav-link">Pricing</a>
-            </li> -->
-            <li class="nav-item">
-              <a href="#testi" class="nav-link">Testimonial</a>
-            </li>
-            <li class="nav-item">
-              <a href="#blog" class="nav-link">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
-            </li>
+             <li class="nav-item dropdown dropdown-hover"> 
+              <a href="#service" class="nav-link" onclick="setActive(this)">Service</a>
+             </li>
+              <li class="nav-item dropdown dropdown-hover">
+                 <a href="#work" class="nav-link" onclick="setActive(this)">Work</a>
+                </li> 
+                <li class="nav-item"> 
+                  <a href="#testi" class="nav-link" onclick="setActive(this)">Testimonial</a> 
+                </li> 
+                <li class="nav-item">
+                   <a href="#blog" class="nav-link" onclick="setActive(this)">Blog</a> 
+                  </li> 
+                  <li class="nav-item">
+                     <a href="#contact" class="nav-link" onclick="setActive(this)">Contact</a> 
+                    </li>
           </ul>
           <!--end navbar-nav-->
           <div class="ms-auto ps-2 col-2 ps-lg-0">
@@ -258,7 +254,7 @@
                         <div
                           class="d-flex align-items-center">
                           <div class="btn-link ">
-                            <a href="#"
+                            <a href="https://arena-abhishek.github.io/ott-platform/"
                               class="text-dark h6">
                               <div
                                 class="read-link btn-link-warning"><span>See
@@ -864,9 +860,7 @@
                     class="mdi mdi-cached fs-24 text-purple"></i>
                 </div>
                 <h6 class="mt-4">Research & Analysis</h6>
-                <p class="text-muted fs-15">We use a customized
-                  application specifically designed a testing
-                  gnose to keep away for people.</p>
+                <p class="text-muted fs-15">Comprehensive Research Analysis on Designing Secure Customized Testing Web Applications</p>
               </div>
             </div>
           </div>
@@ -879,9 +873,7 @@
                     class="mdi mdi-comment-plus-outline fs-24 text-danger"></i>
                 </div>
                 <h6 class="mt-4">Web Development</h6>
-                <p class="text-muted fs-15">We use a customized
-                  application specifically designed a testing
-                  gnose to keep away for people.</p>
+                <p class="text-muted fs-15">Building responsive, user-friendly websites with modern technologies to enhance your online presence and experience</p>
               </div>
             </div>
           </div>
@@ -893,10 +885,8 @@
                   <i
                     class="mdi mdi-layers fs-24 text-warning"></i>
                 </div>
-                <h6 class="mt-4">Network Management</h6>
-                <p class="text-muted fs-15 ">We use a customized
-                  application specifically designed a testing
-                  gnose to keep away for people.</p>
+                <h6 class="mt-4">Web Design</h6>
+                <p class="text-muted fs-15 ">Creating visually appealing, user-centric designs that provide seamless and engaging web experiences.</p>
               </div>
             </div>
           </div>
@@ -912,9 +902,7 @@
                     class="mdi mdi-inbox-arrow-up fs-24 text-blue"></i>
                 </div>
                 <h6 class="mt-4">UI/UX Development</h6>
-                <p class="text-muted fs-15">We use a customized
-                  application specifically designed a testing
-                  gnose to keep away for people.</p>
+                <p class="text-muted fs-15">Designing intuitive, user-focused interfaces to enhance usability and deliver an exceptional digital experience.</p>
               </div>
             </div>
           </div>
@@ -926,10 +914,8 @@
                   <i
                     class="mdi mdi-chart-line fs-24 text-primary"></i>
                 </div>
-                <h6 class="mt-4">Mobile App Development</h6>
-                <p class="text-muted fs-15">We use a customized
-                  application specifically designed a testing
-                  gnose to keep away for people.</p>
+                <h6 class="mt-4">Brand building</h6>
+                <p class="text-muted fs-15">Crafting unique, memorable brands that resonate with your audience and strengthen your market presence</p>
               </div>
             </div>
           </div>
@@ -941,11 +927,8 @@
                   <i
                     class="mdi mdi-email-open fs-24 text-pink"></i>
                 </div>
-                <h6 class="mt-4">Network Management</h6>
-                <p class="text-muted fs-15">A skilled developer with experience
-                  in building efficient, responsive websites and applications,
-                  proficient in modern web technologies and coding practices.
-                  .</p>
+                <h6 class="mt-4">SEO</h6>
+                <p class="text-muted fs-15">Optimizing websites with SEO best practices to improve visibility and drive organic traffic growth.</p>
               </div>
             </div>
           </div>
@@ -2032,13 +2015,15 @@
       <!-- start container -->
       <div class="container">
         <div class="row">
+          <div class="col-lg-3 mt-4">
+            <a class=" logo text-uppercase" href="index.html">
+              <img src="images/logo-light.png"
+                class="logo-light" alt height="200">
+              <!-- <img src="images/logo-light.png" class="logo-dark" alt="" height="28"> -->
+            </a>
+          </div>
           <div class="col-lg-3">
             <div class="mt-5">
-              <a class=" logo text-uppercase" href="index.html">
-                <img src="images/logo-light.png"
-                  class="logo-light" alt height="32">
-                <!-- <img src="images/logo-light.png" class="logo-dark" alt="" height="28"> -->
-              </a>
               <p class="fs-15 text-white-50 mt-4">A Private
                 Limited is the most popular type of partnership
                 Malta.
@@ -2127,7 +2112,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4">
+          <!-- <div class="col-lg-4 mt-4">
             <h5 class="text-white">Sign up</h5>
             <p class="mb-0 text-white-50 mt-4">Follow our newsletter
               to stay updated about agency.</p>
@@ -2140,7 +2125,7 @@
                 id="basic-addon2">Go</a>
             </div>
             <p></p>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- end container -->
