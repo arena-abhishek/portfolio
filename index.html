@@ -111,13 +111,13 @@
               data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-4">
-            <form class="row g-3 needs-validation">
+            <form class="row g-3 needs-validation" action="sendEmail.php" method="post">
               <div class="col-md-6">
                 <label for="validationCustom01"
                   class="form-label">First name <span
                     class="text-primary">*</span></label>
                 <input type="text" class="form-control"
-                  id="validationCustom01" value required>
+                  id="validationCustom01" value name="firstName" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -127,7 +127,7 @@
                   class="form-label">Last name <span
                     class="text-primary">*</span></label>
                 <input type="text" class="form-control"
-                  id="validationCustom02" value required>
+                  id="validationCustom02" value name="lastName" required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -137,7 +137,7 @@
                   class="form-label">Subject <span
                     class="text-primary">*</span></label>
                 <input type="text" class="form-control"
-                  id="validationCustom03" required>
+                  id="validationCustom03" name="subject" required>
                 <div class="invalid-feedback">
                   Please provide a valid city.
                 </div>
@@ -147,7 +147,7 @@
                   class="form-label">Email <span
                     class="text-primary">*</span></label>
                 <input type="email" class="form-control"
-                  id="validationCustom04" value required>
+                  id="validationCustom04" name="email" value required>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -157,7 +157,7 @@
                   class="form-label">Textarea<span
                     class="text-primary">*</span></label>
                 <textarea class="form-control"
-                  id="validationTextarea" required></textarea>
+                  id="validationTextarea" name="comments" required></textarea>
                 <div class="invalid-feedback">
                   You must agree before submitting.
                 </div>
@@ -1930,7 +1930,7 @@
             </div>
             <div class="col-lg-7 ">
               <div class="custom-form mt-4 ">
-                <form method="post" name="myForm"
+                <form method="post" action="sendEmail.php" name="myForm"
                   onsubmit="return validateForm()">
 
                   <h6 class="mb-0 text-muted">Let's talk</h6>
@@ -1950,7 +1950,8 @@
                         <input name="name" id="name"
                           type="text"
                           class="form-control contact-form"
-                          placeholder="Your name">
+                          placeholder="Your name"
+                          >
                       </div>
                     </div>
                     <div class="col-lg-6">
@@ -1966,6 +1967,7 @@
                     <div class="col-lg-12">
                       <div class="form-group mt-2">
                         <input type="text"
+                          name="subject"
                           class="form-control contact-form"
                           id="subject"
                           placeholder="Your Subject..">
