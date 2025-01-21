@@ -23,3 +23,21 @@
   height: 150px;
   top: -37px;
 }
+
+.button--flex{
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-cv{
+  background-color: #2fb4ae;
+  color: #fff;
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.btn-cv:hover {
+  transform: scale(1.05); 
+}

@@ -346,3 +346,24 @@ function setActive(element) {
   element.classList.add("active");
 }
 /* navigation bar end */
+
+function sendEmail() {
+  let parms = {
+    firstName: document.getElementById("validationCustom01").value,
+    lastName: document.getElementById("validationCustom02").value,
+    subject: document.getElementById("validationCustom03").value,
+    email: document.getElementById("validationCustom04").value,
+    comments: document.getElementById("validationTextarea").value,
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("comments").value,
+  };
+
+  emailjs
+    .send("service_7em0blz", "template_hikehiv", parms)
+    .then(function (response) {
+      console.log("SUCCESS", response.status, response.text);
+      alert("Your message has been sent successfully!");
+    })
+}
